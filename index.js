@@ -13,6 +13,7 @@ function fibs(n) {
     return fibonacciSequence;
 }
 
+/*
 const result = fibs(8);
 console.log(result); 
 
@@ -27,3 +28,11 @@ function fibsRec(n, sequence = [], a = 0, b = 1) {
 
 const resultRec = fibsRec(8);
 console.log(resultRec);
+
+this is a more understandable version of the code 
+*/
+
+const fibsRec = (n, a = 0, b = 1, sequence = []) => n <= 0 ? sequence : (sequence.push(a), fibsRec(n - 1, b, a + b, sequence));
+
+const resultRec = fibsRec(8);
+console.log(resultRec); //this is just a flex
